@@ -165,24 +165,33 @@ function blockScroll() {
     document.documentElement.classList.toggle('no-scroll');
 }
 
-const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
-  
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-    },
-  
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  
-    // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
-  });
+
+// Function that actually builds the swiper 
+const buildSwiperSlider = sliderElm => {
+    const sliderIdentifier = sliderElm.dataset.id;
+    return swiper = new Swiper(sliderElm, {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+      
+        // If we need pagination
+        navigation: {
+            nextEl: `.swiper-button-next-${sliderIdentifier}`,
+            prevEl: `.swiper-button-prev-${sliderIdentifier}`
+        },
+        pagination: {
+            el: '.swiper-pagination',
+          },
+      
+        // And if we need scrollbar
+        scrollbar: {
+          el: '.swiper-scrollbar',
+        },
+      });
+}
+
+// Get all of the swipers on the page
+const allSliders = document.querySelectorAll('.swiper');
+
+// Loop over all of the fetched sliders and apply Swiper on each one.
+allSliders.forEach(slider => buildSwiperSlider(slider));
