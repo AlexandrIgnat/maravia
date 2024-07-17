@@ -1736,12 +1736,54 @@ section {
     margin-bottom: 10px;
   }
 }
+
+/* HOTELS */
+
+.hotels__wrapper {
+  display: flex;
+  gap: 30px;
+}
+.hotels__list {
+  display: flex;
+  justify-content: space-between;
+}
+.hotels__item {
+  flex: 0 1 calc(50% - 10px);
+}
 .swiper {
-  width: 600px;
-  /* height: max-content; */
+  /* max-width: 810px; */
+  width: 100%;
+  height: 100%;
+}
+.swiper  .swiper-slide {
+  height: 100%;
+  background-image: url('../../assets/images/hotels/room.jpg');
+}
+.swiper-button-prev {
+  width: 14px;
+  height: 10px;
+  bottom: 20px;
+  top: initial;
+  left: calc(50% - 70px);
+  background-image: url('../../assets/images/arrow_left.svg');
+  background-size: 100% 100%;
 }
 
-.swiper-slide {
-    height: 300px;
-    background-image: url('../../assets/images/hotels/room.jpg');
+.swiper-button-next {
+  width: 14px;
+  height: 10px;
+  bottom: 20px;
+  top: initial;
+  right: calc(50% - 70px);
+  background-image: url('../../assets/images/arrow_left.svg');
+  background-size: 100% 100%;
+  transform: rotate(180deg);
+}
+
+.swiper-button-next::after, .swiper-button-prev::after {
+  content: "";
+}
+
+.swiper-button-lock {
+  display: initial;
 }
