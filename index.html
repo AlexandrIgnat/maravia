@@ -1,172 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Maravia</title>
     <link rel="shortcut icon" href="assets/favicon/android-chrome-192x192.png" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" >
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
     <link rel="icon" href="assets/favicon/favicon.ico" type="image/x-icon">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="js/styler/jquery.formstyler.css">
     <link rel="stylesheet" href="assets/style/style.css?v=20">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,600,700&subset=cyrillic">
 
 
 </head>
+
 <body>
-<header class="header white">
-    <div class="container">
-        <div class="header-container">
-            <a href="/" class="header__logo">
-                <svg width="112" height="64" viewBox="0 0 112 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 42.5882L2.93628 20.9559H3.27346L11.6749 38.7059L19.992 20.9559H20.3292L23.2935 42.5882H21.2564L19.2333 27.1176L11.9277 42.5882H11.4079L4.00401 27L1.99498 42.5882H0Z" fill="#112227"/>
-                    <path d="M42.288 26.5882V42.5882H40.3492V39.8382C39.525 40.8873 38.5978 41.6765 37.5675 42.2059C36.5466 42.7353 35.4273 43 34.2097 43C32.0462 43 30.1964 42.1814 28.6603 40.5441C27.1336 38.8971 26.3703 36.8971 26.3703 34.5441C26.3703 32.2402 27.143 30.2696 28.6884 28.6324C30.2338 26.9951 32.093 26.1765 34.2659 26.1765C35.521 26.1765 36.6543 26.4559 37.6658 27.0147C38.6867 27.5735 39.5812 28.4118 40.3492 29.5294V26.5882H42.288ZM34.4205 28.1618C33.3246 28.1618 32.3131 28.4461 31.3859 29.0147C30.4586 29.5735 29.7187 30.3627 29.1661 31.3824C28.6228 32.402 28.3512 33.4804 28.3512 34.6176C28.3512 35.7451 28.6275 36.8235 29.1801 37.8529C29.7327 38.8824 30.4727 39.6863 31.3999 40.2647C32.3365 40.8333 33.3387 41.1176 34.4064 41.1176C35.4835 41.1176 36.5044 40.8333 37.4691 40.2647C38.4339 39.6961 39.1738 38.9265 39.6889 37.9559C40.2134 36.9853 40.4757 35.8922 40.4757 34.6765C40.4757 32.8235 39.8903 31.2745 38.7195 30.0294C37.5581 28.7843 36.1251 28.1618 34.4205 28.1618Z" fill="#112227"/>
-                    <path d="M45.9829 26.5882H47.992V28.9265C48.5914 28.0049 49.2236 27.3186 49.8886 26.8676C50.5536 26.4069 51.2467 26.1765 51.9679 26.1765C52.5111 26.1765 53.0918 26.3578 53.71 26.7206L52.6844 28.4559C52.2723 28.2696 51.9257 28.1765 51.6448 28.1765C50.9891 28.1765 50.3569 28.4608 49.7481 29.0294C49.1393 29.5882 48.6757 30.4608 48.3573 31.6471C48.1137 32.5588 47.992 34.402 47.992 37.1765V42.5882H45.9829V26.5882Z" fill="#112227"/>
-                    <path d="M70.6111 26.5882V42.5882H68.6724V39.8382C67.8481 40.8873 66.9209 41.6765 65.8906 42.2059C64.8697 42.7353 63.7505 43 62.5329 43C60.3693 43 58.5195 42.1814 56.9834 40.5441C55.4568 38.8971 54.6934 36.8971 54.6934 34.5441C54.6934 32.2402 55.4661 30.2696 57.0115 28.6324C58.5569 26.9951 60.4161 26.1765 62.5891 26.1765C63.8441 26.1765 64.9774 26.4559 65.989 27.0147C67.0099 27.5735 67.9043 28.4118 68.6724 29.5294V26.5882H70.6111ZM62.7436 28.1618C61.6478 28.1618 60.6362 28.4461 59.709 29.0147C58.7817 29.5735 58.0418 30.3627 57.4892 31.3824C56.946 32.402 56.6744 33.4804 56.6744 34.6176C56.6744 35.7451 56.9507 36.8235 57.5033 37.8529C58.0559 38.8824 58.7958 39.6863 59.723 40.2647C60.6596 40.8333 61.6618 41.1176 62.7296 41.1176C63.8067 41.1176 64.8276 40.8333 65.7923 40.2647C66.757 39.6961 67.4969 38.9265 68.012 37.9559C68.5365 36.9853 68.7988 35.8922 68.7988 34.6765C68.7988 32.8235 68.2134 31.2745 67.0426 30.0294C65.8812 28.7843 64.4482 28.1618 62.7436 28.1618Z" fill="#112227"/>
-                    <path d="M73.6036 26.5882H75.6969L80.8108 38.2353L85.8826 26.5882H87.99L80.9935 42.5882H80.6423L73.6036 26.5882Z" fill="#112227"/>
-                    <path d="M91.6989 20C92.1485 20 92.5325 20.1667 92.851 20.5C93.1694 20.8333 93.3287 21.2353 93.3287 21.7059C93.3287 22.1667 93.1694 22.5637 92.851 22.8971C92.5325 23.2304 92.1485 23.3971 91.6989 23.3971C91.2587 23.3971 90.8794 23.2304 90.561 22.8971C90.2425 22.5637 90.0833 22.1667 90.0833 21.7059C90.0833 21.2353 90.2425 20.8333 90.561 20.5C90.8794 20.1667 91.2587 20 91.6989 20ZM90.7155 26.5882H92.6964V42.5882H90.7155V26.5882Z" fill="#112227"/>
-                    <path d="M112 26.5882V42.5882H110.061V39.8382C109.237 40.8873 108.31 41.6765 107.279 42.2059C106.259 42.7353 105.139 43 103.922 43C101.758 43 99.9083 42.1814 98.3723 40.5441C96.8456 38.8971 96.0823 36.8971 96.0823 34.5441C96.0823 32.2402 96.855 30.2696 98.4004 28.6324C99.9458 26.9951 101.805 26.1765 103.978 26.1765C105.233 26.1765 106.366 26.4559 107.378 27.0147C108.399 27.5735 109.293 28.4118 110.061 29.5294V26.5882H112ZM104.132 28.1618C103.037 28.1618 102.025 28.4461 101.098 29.0147C100.171 29.5735 99.4307 30.3627 98.8781 31.3824C98.3348 32.402 98.0632 33.4804 98.0632 34.6176C98.0632 35.7451 98.3395 36.8235 98.8921 37.8529C99.4447 38.8824 100.185 39.6863 101.112 40.2647C102.049 40.8333 103.051 41.1176 104.118 41.1176C105.196 41.1176 106.216 40.8333 107.181 40.2647C108.146 39.6961 108.886 38.9265 109.401 37.9559C109.925 36.9853 110.188 35.8922 110.188 34.6765C110.188 32.8235 109.602 31.2745 108.432 30.0294C107.27 28.7843 105.837 28.1618 104.132 28.1618Z" fill="#112227"/>
-                </svg>
-            </a>
-            <nav class="header-navigation">
-              <div class="header-navigation__wrapper">
-                  <ul>
-                      <li class="header-navigation__item">
-                          <a href="" class="header-navigation__link">Хадж</a>
-                          <!-- <div class="header-navigation__list">
+    <header class="header white">
+        <div class="container">
+            <div class="header-container">
+                <a href="/" class="header__logo">
+                    <svg width="112" height="64" viewBox="0 0 112 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M0 42.5882L2.93628 20.9559H3.27346L11.6749 38.7059L19.992 20.9559H20.3292L23.2935 42.5882H21.2564L19.2333 27.1176L11.9277 42.5882H11.4079L4.00401 27L1.99498 42.5882H0Z"
+                            fill="#112227" />
+                        <path
+                            d="M42.288 26.5882V42.5882H40.3492V39.8382C39.525 40.8873 38.5978 41.6765 37.5675 42.2059C36.5466 42.7353 35.4273 43 34.2097 43C32.0462 43 30.1964 42.1814 28.6603 40.5441C27.1336 38.8971 26.3703 36.8971 26.3703 34.5441C26.3703 32.2402 27.143 30.2696 28.6884 28.6324C30.2338 26.9951 32.093 26.1765 34.2659 26.1765C35.521 26.1765 36.6543 26.4559 37.6658 27.0147C38.6867 27.5735 39.5812 28.4118 40.3492 29.5294V26.5882H42.288ZM34.4205 28.1618C33.3246 28.1618 32.3131 28.4461 31.3859 29.0147C30.4586 29.5735 29.7187 30.3627 29.1661 31.3824C28.6228 32.402 28.3512 33.4804 28.3512 34.6176C28.3512 35.7451 28.6275 36.8235 29.1801 37.8529C29.7327 38.8824 30.4727 39.6863 31.3999 40.2647C32.3365 40.8333 33.3387 41.1176 34.4064 41.1176C35.4835 41.1176 36.5044 40.8333 37.4691 40.2647C38.4339 39.6961 39.1738 38.9265 39.6889 37.9559C40.2134 36.9853 40.4757 35.8922 40.4757 34.6765C40.4757 32.8235 39.8903 31.2745 38.7195 30.0294C37.5581 28.7843 36.1251 28.1618 34.4205 28.1618Z"
+                            fill="#112227" />
+                        <path
+                            d="M45.9829 26.5882H47.992V28.9265C48.5914 28.0049 49.2236 27.3186 49.8886 26.8676C50.5536 26.4069 51.2467 26.1765 51.9679 26.1765C52.5111 26.1765 53.0918 26.3578 53.71 26.7206L52.6844 28.4559C52.2723 28.2696 51.9257 28.1765 51.6448 28.1765C50.9891 28.1765 50.3569 28.4608 49.7481 29.0294C49.1393 29.5882 48.6757 30.4608 48.3573 31.6471C48.1137 32.5588 47.992 34.402 47.992 37.1765V42.5882H45.9829V26.5882Z"
+                            fill="#112227" />
+                        <path
+                            d="M70.6111 26.5882V42.5882H68.6724V39.8382C67.8481 40.8873 66.9209 41.6765 65.8906 42.2059C64.8697 42.7353 63.7505 43 62.5329 43C60.3693 43 58.5195 42.1814 56.9834 40.5441C55.4568 38.8971 54.6934 36.8971 54.6934 34.5441C54.6934 32.2402 55.4661 30.2696 57.0115 28.6324C58.5569 26.9951 60.4161 26.1765 62.5891 26.1765C63.8441 26.1765 64.9774 26.4559 65.989 27.0147C67.0099 27.5735 67.9043 28.4118 68.6724 29.5294V26.5882H70.6111ZM62.7436 28.1618C61.6478 28.1618 60.6362 28.4461 59.709 29.0147C58.7817 29.5735 58.0418 30.3627 57.4892 31.3824C56.946 32.402 56.6744 33.4804 56.6744 34.6176C56.6744 35.7451 56.9507 36.8235 57.5033 37.8529C58.0559 38.8824 58.7958 39.6863 59.723 40.2647C60.6596 40.8333 61.6618 41.1176 62.7296 41.1176C63.8067 41.1176 64.8276 40.8333 65.7923 40.2647C66.757 39.6961 67.4969 38.9265 68.012 37.9559C68.5365 36.9853 68.7988 35.8922 68.7988 34.6765C68.7988 32.8235 68.2134 31.2745 67.0426 30.0294C65.8812 28.7843 64.4482 28.1618 62.7436 28.1618Z"
+                            fill="#112227" />
+                        <path
+                            d="M73.6036 26.5882H75.6969L80.8108 38.2353L85.8826 26.5882H87.99L80.9935 42.5882H80.6423L73.6036 26.5882Z"
+                            fill="#112227" />
+                        <path
+                            d="M91.6989 20C92.1485 20 92.5325 20.1667 92.851 20.5C93.1694 20.8333 93.3287 21.2353 93.3287 21.7059C93.3287 22.1667 93.1694 22.5637 92.851 22.8971C92.5325 23.2304 92.1485 23.3971 91.6989 23.3971C91.2587 23.3971 90.8794 23.2304 90.561 22.8971C90.2425 22.5637 90.0833 22.1667 90.0833 21.7059C90.0833 21.2353 90.2425 20.8333 90.561 20.5C90.8794 20.1667 91.2587 20 91.6989 20ZM90.7155 26.5882H92.6964V42.5882H90.7155V26.5882Z"
+                            fill="#112227" />
+                        <path
+                            d="M112 26.5882V42.5882H110.061V39.8382C109.237 40.8873 108.31 41.6765 107.279 42.2059C106.259 42.7353 105.139 43 103.922 43C101.758 43 99.9083 42.1814 98.3723 40.5441C96.8456 38.8971 96.0823 36.8971 96.0823 34.5441C96.0823 32.2402 96.855 30.2696 98.4004 28.6324C99.9458 26.9951 101.805 26.1765 103.978 26.1765C105.233 26.1765 106.366 26.4559 107.378 27.0147C108.399 27.5735 109.293 28.4118 110.061 29.5294V26.5882H112ZM104.132 28.1618C103.037 28.1618 102.025 28.4461 101.098 29.0147C100.171 29.5735 99.4307 30.3627 98.8781 31.3824C98.3348 32.402 98.0632 33.4804 98.0632 34.6176C98.0632 35.7451 98.3395 36.8235 98.8921 37.8529C99.4447 38.8824 100.185 39.6863 101.112 40.2647C102.049 40.8333 103.051 41.1176 104.118 41.1176C105.196 41.1176 106.216 40.8333 107.181 40.2647C108.146 39.6961 108.886 38.9265 109.401 37.9559C109.925 36.9853 110.188 35.8922 110.188 34.6765C110.188 32.8235 109.602 31.2745 108.432 30.0294C107.27 28.7843 105.837 28.1618 104.132 28.1618Z"
+                            fill="#112227" />
+                    </svg>
+                </a>
+                <nav class="header-navigation">
+                    <div class="header-navigation__wrapper">
+                        <ul>
+                            <li class="header-navigation__item">
+                                <a href="" class="header-navigation__link">Хадж</a>
+                                <!-- <div class="header-navigation__list">
                               <a href="">Грозный</a>
                               <a href="">Грозный</a>
                               <a href="">Грозный</a>
                           </div> -->
-                      </li>
-                      <li class="header-navigation__item">
-                          <a href="" class="header-navigation__link">Умра</a>
-                          <!-- <div class="header-navigation__list">
+                            </li>
+                            <li class="header-navigation__item">
+                                <a href="" class="header-navigation__link">Умра</a>
+                                <!-- <div class="header-navigation__list">
                               <a href="">Грозный</a>
                               <a href="">Ташкент</a>
                               <a href="">Самарканд</a>
                           </div> -->
-                      </li>
-                      <!-- <li class="header-navigation__item">
+                            </li>
+                            <!-- <li class="header-navigation__item">
                           <a href="" class="header-navigation__link">Туры</a>
                       </li> -->
-                      <li class="header-navigation__item">
-                          <a href="" class="header-navigation__link">Информация</a>
-                          <div class="header-navigation__list">
-                                <a href="">Вопросы и ответы</a>
-                                <a href="">Фотогалерея</a>
-                                <a href="">Оставить отзыв</a>
-                          </div>
-                      </li>
-                      <li class="header-navigation__item">
-                          <a href="/medina/" class="header-navigation__link">Онлайн-трансляция</a>
-                          <!-- <div class="header-navigation__list">
+                            <li class="header-navigation__item">
+                                <a href="" class="header-navigation__link">Информация</a>
+                                <div class="header-navigation__list">
+                                    <a href="">Вопросы и ответы</a>
+                                    <a href="">Фотогалерея</a>
+                                    <a href="">Оставить отзыв</a>
+                                </div>
+                            </li>
+                            <li class="header-navigation__item">
+                                <a href="/medina/" class="header-navigation__link">Онлайн-трансляция</a>
+                                <!-- <div class="header-navigation__list">
                               <a href="">Грозный</a>
                               <a href="">Ташкент</a>
                               <a href="">Самарканд</a>
                           </div> -->
-                      </li>
-                      <li class="header-navigation__item">
-                          <a href="" class="header-navigation__link">О компании</a>
-                      </li>
-                      <li class="header-navigation__item show-only-1200">
-                        <a href="https://agent.maravia.ru" class="header-navigation__link">Для агенств</a>
-                    </li>
-                  </ul>
-              </div>
-            </nav>
-            <div class="header__item">
-                <a href="84951204478" class="header__phone header__phone--desktops">+7(495)120-44-78</a>
-                <button class="burger">
-                    <svg width="24" height="11" viewBox="0 0 24 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect class="line1" width="24" height="1" rx="0.5" fill="black"/>
-                        <rect class="line2" y="5" width="24" height="1" rx="0.5" fill="black"/>
-                        <rect class="line3" y="10" width="24" height="1" rx="0.5" fill="black"/>
-                    </svg>
-                </button>
-                <a href="https://agent.maravia.ru" class="header__agency">Для агенств</a>
-            </div>
-        </div>
-    </div>
-</header>
-<main class="main no-padding">
-    <div class="main-banner">
-        <img src="assets/images/main-banner.jpg" alt="">
-        <div class="main-banner__content">
-            <div class="container">
-                <div class="main-filter">
-                    <div class="main-filter__top">
-                        <div class="main-filter__item main-filter__item-custom">
-                            <input type="text" placeholder="Откуда">
-                            <div class="main-filter__change">
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M14.0231 9.61859C14.1785 9.46325 14.3892 9.37598 14.609 9.37598C14.8287 9.37598 15.0394 9.46325 15.1948 9.61859L18.9237 13.3475C19.0791 13.5029 19.1663 13.7136 19.1663 13.9333C19.1663 14.1531 19.0791 14.3638 18.9237 14.5192L15.1948 18.2481C15.0385 18.399 14.8292 18.4825 14.6119 18.4807C14.3947 18.4788 14.1868 18.3916 14.0332 18.238C13.8796 18.0843 13.7924 17.8765 13.7905 17.6592C13.7886 17.442 13.8722 17.2327 14.0231 17.0764L16.2662 14.762H1.66165C1.44188 14.762 1.23111 14.6747 1.07571 14.5193C0.920311 14.3639 0.833008 14.1531 0.833008 13.9333C0.833008 13.7136 0.920311 13.5028 1.07571 13.3474C1.23111 13.192 1.44188 13.1047 1.66165 13.1047H16.2662L14.0231 10.7903C13.8678 10.6349 13.7805 10.4242 13.7805 10.2044C13.7805 9.98472 13.8678 9.77399 14.0231 9.61859Z" fill="#112227"/>
-                                    <path d="M5.97591 1.22846C5.82052 1.07311 5.60979 0.98584 5.39006 0.98584C5.17033 0.98584 4.9596 1.07311 4.80421 1.22846L1.07532 4.95735C0.91997 5.11274 0.832703 5.32347 0.832703 5.5432C0.832703 5.76292 0.91997 5.97365 1.07532 6.12905L4.80421 9.85794C4.96049 10.0089 5.16981 10.0924 5.38708 10.0905C5.60434 10.0886 5.81218 10.0015 5.96582 9.84784C6.11945 9.69421 6.2066 9.48637 6.20849 9.2691C6.21038 9.05184 6.12685 8.84252 5.97591 8.68624L3.73277 6.37184H18.3374C18.5571 6.37184 18.7679 6.28454 18.9233 6.12914C19.0787 5.97373 19.166 5.76297 19.166 5.5432C19.166 5.32343 19.0787 5.11266 18.9233 4.95726C18.7679 4.80186 18.5571 4.71455 18.3374 4.71455H3.73277L5.97591 2.40016C6.13126 2.24476 6.21853 2.03403 6.21853 1.81431C6.21853 1.59458 6.13126 1.38385 5.97591 1.22846Z" fill="#112227"/>
-                                </svg>
-                            </div>
-                            <input type="text" placeholder="Куда">
-                        </div>
-                        <input placeholder="Туда" class="datepicker">
-                        <input placeholder="Обратно" class="datepicker">
-                        <div class="main-filter__select--desktops">
-                            <select name="" id="">
-                                <option value="">1 Пассажир</option>
-                                <option value="">2 Пассажира</option>
-                            </select>
-                        </div>
-                        <button class="btn btn-prime main-filter__btn--desktops">Найти билеты</button>
+                            </li>
+                            <li class="header-navigation__item">
+                                <a href="" class="header-navigation__link">О компании</a>
+                            </li>
+                            <li class="header-navigation__item show-only-1200">
+                                <a href="https://agent.maravia.ru" class="header-navigation__link">Для агенств</a>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="main-filter__bot">
-                        <div class="main-filter__select main-filter__bot--item main-filter__select--mobile">
-                            <select name="" id="">
-                                <option value="">1 Пассажир</option>
-                                <option value="">2 Пассажира</option>
-                            </select>
-                        </div>
-                        <div class="main-filter__select main-filter__bot--item">
-                            <span>Маршрут</span>
-                            <select name="" id="">
-                                <option value="">В одну сторону</option>
-                                <option value="">В две стороны</option>
-                            </select>
-                        </div>
-                        <div class="main-filter__select main-filter__bot--item">
-                            <span>Класс</span>
-                            <select name="" id="">
-                                <option value="">Эконом</option>
-                                <option value="">Бизнес</option>
-                            </select>
-                        </div>
-                        <div class="main-filter__checkbox main-filter__bot--item">
-                            <input type="checkbox" name="day" id="day" value="3 дня">
-                            <label for="day">
-                                <span>3 дня</span>
-                            </label>
-                        </div>
-                        <div class="main-filter__checkbox main-filter__bot--item">
-                            <input type="checkbox" name="straight" id="straight" value="только прямые">
-                            <label for="straight">
-                                <span>только прямые</span>
-                            </label>
-                        </div>
-                        <div class="main-filter__bot--item">
-                            <select name="" id="">
-                                <option value="">Еще параметры</option>
-                                <option value="">Еще параметры</option>
-                            </select>
-                        </div>
-                    </div>
-                    <button class="btn btn-prime main-filter__btn--mobile">Найти билеты</button>
+                </nav>
+                <div class="header__item">
+                    <a href="84951204478" class="header__phone header__phone--desktops">+7(495)120-44-78</a>
+                    <button class="burger">
+                        <svg width="24" height="11" viewBox="0 0 24 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect class="line1" width="24" height="1" rx="0.5" fill="black" />
+                            <rect class="line2" y="5" width="24" height="1" rx="0.5" fill="black" />
+                            <rect class="line3" y="10" width="24" height="1" rx="0.5" fill="black" />
+                        </svg>
+                    </button>
+                    <a href="https://agent.maravia.ru" class="header__agency">Для агенств</a>
                 </div>
             </div>
         </div>
-    </div>
-<!--
+    </header>
+    <main class="main no-padding">
+        <div class="main-banner">
+            <img src="assets/images/main-banner.jpg" alt="">
+            <div class="main-banner__content">
+                <div class="container">
+                    <div class="main-filter">
+                        <div class="main-filter__top">
+                            <div class="main-filter__item main-filter__item-custom">
+                                <input type="text" placeholder="Откуда">
+                                <div class="main-filter__change">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14.0231 9.61859C14.1785 9.46325 14.3892 9.37598 14.609 9.37598C14.8287 9.37598 15.0394 9.46325 15.1948 9.61859L18.9237 13.3475C19.0791 13.5029 19.1663 13.7136 19.1663 13.9333C19.1663 14.1531 19.0791 14.3638 18.9237 14.5192L15.1948 18.2481C15.0385 18.399 14.8292 18.4825 14.6119 18.4807C14.3947 18.4788 14.1868 18.3916 14.0332 18.238C13.8796 18.0843 13.7924 17.8765 13.7905 17.6592C13.7886 17.442 13.8722 17.2327 14.0231 17.0764L16.2662 14.762H1.66165C1.44188 14.762 1.23111 14.6747 1.07571 14.5193C0.920311 14.3639 0.833008 14.1531 0.833008 13.9333C0.833008 13.7136 0.920311 13.5028 1.07571 13.3474C1.23111 13.192 1.44188 13.1047 1.66165 13.1047H16.2662L14.0231 10.7903C13.8678 10.6349 13.7805 10.4242 13.7805 10.2044C13.7805 9.98472 13.8678 9.77399 14.0231 9.61859Z"
+                                            fill="#112227" />
+                                        <path
+                                            d="M5.97591 1.22846C5.82052 1.07311 5.60979 0.98584 5.39006 0.98584C5.17033 0.98584 4.9596 1.07311 4.80421 1.22846L1.07532 4.95735C0.91997 5.11274 0.832703 5.32347 0.832703 5.5432C0.832703 5.76292 0.91997 5.97365 1.07532 6.12905L4.80421 9.85794C4.96049 10.0089 5.16981 10.0924 5.38708 10.0905C5.60434 10.0886 5.81218 10.0015 5.96582 9.84784C6.11945 9.69421 6.2066 9.48637 6.20849 9.2691C6.21038 9.05184 6.12685 8.84252 5.97591 8.68624L3.73277 6.37184H18.3374C18.5571 6.37184 18.7679 6.28454 18.9233 6.12914C19.0787 5.97373 19.166 5.76297 19.166 5.5432C19.166 5.32343 19.0787 5.11266 18.9233 4.95726C18.7679 4.80186 18.5571 4.71455 18.3374 4.71455H3.73277L5.97591 2.40016C6.13126 2.24476 6.21853 2.03403 6.21853 1.81431C6.21853 1.59458 6.13126 1.38385 5.97591 1.22846Z"
+                                            fill="#112227" />
+                                    </svg>
+                                </div>
+                                <input type="text" placeholder="Куда">
+                            </div>
+                            <input placeholder="Туда" class="datepicker">
+                            <input placeholder="Обратно" class="datepicker">
+                            <div class="main-filter__select--desktops">
+                                <select name="" id="">
+                                    <option value="">1 Пассажир</option>
+                                    <option value="">2 Пассажира</option>
+                                </select>
+                            </div>
+                            <button class="btn btn-prime main-filter__btn--desktops">Найти билеты</button>
+                        </div>
+                        <div class="main-filter__bot">
+                            <div class="main-filter__select main-filter__bot--item main-filter__select--mobile">
+                                <select name="" id="">
+                                    <option value="">1 Пассажир</option>
+                                    <option value="">2 Пассажира</option>
+                                </select>
+                            </div>
+                            <div class="main-filter__select main-filter__bot--item">
+                                <span>Маршрут</span>
+                                <select name="" id="">
+                                    <option value="">В одну сторону</option>
+                                    <option value="">В две стороны</option>
+                                </select>
+                            </div>
+                            <div class="main-filter__select main-filter__bot--item">
+                                <span>Класс</span>
+                                <select name="" id="">
+                                    <option value="">Эконом</option>
+                                    <option value="">Бизнес</option>
+                                </select>
+                            </div>
+                            <div class="main-filter__checkbox main-filter__bot--item">
+                                <input type="checkbox" name="day" id="day" value="3 дня">
+                                <label for="day">
+                                    <span>3 дня</span>
+                                </label>
+                            </div>
+                            <div class="main-filter__checkbox main-filter__bot--item">
+                                <input type="checkbox" name="straight" id="straight" value="только прямые">
+                                <label for="straight">
+                                    <span>только прямые</span>
+                                </label>
+                            </div>
+                            <div class="main-filter__bot--item">
+                                <select name="" id="">
+                                    <option value="">Еще параметры</option>
+                                    <option value="">Еще параметры</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="btn btn-prime main-filter__btn--mobile">Найти билеты</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--
 <div id="root"></div>
 <link rel="stylesheet" href="https://cdn.nemo.travel/search-form/v2.5.22/flights.search.widget.min.css">
 <script src="https://cdn.nemo.travel/search-form/v2.5.22/flights.search.widget.min.js"></script>
@@ -179,212 +201,218 @@
         locale: 'ru'
     });
 </script> -->
-    <section class="specials">
-        <div class="container">
-            <div class="specials__list">
-                <a href="/hadj/" class="specials__item">
-                    <img src="assets/images/specials/item1.jpg" alt="">
-                    <div class="specials__text">
-                        <h2>Хадж</h2>
-                        <span class="specials__subtitle">2024</span>
-                        <span>Специальное предложение</span>
-                    </div>
-                </a>
-                <a href="/hadj/" class="specials__item">
-                    <img src="assets/images/specials/item2.jpg" alt="">
-                    <div class="specials__text">
-                        <h2>Умра</h2>
-                        <span class="specials__subtitle">2024</span>
-                        <span>Специальное предложение</span>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-    <section class="banner">
-        <div class="banner__bg">
-            <img  src="assets/images/banner.jpg" alt="">
-        </div>
-        <div class="banner__content">
-            <div class="banner__tag">
-                Специальное предложение
-            </div>
-            <span>
-                Ближайшие даты тура
-            </span>
-            <h2>
-                2 —16 июня
-            </h2>
-            <button class="btn btn-prime">
-                Найти билеты
-            </button>
-        </div>
-    </section>
-    <section class="services">
-        <div class="container">
-            <div class="services__list">
-                <a href="" class="services__item">
-                    <div class="services__img">
-                        <img src="assets/images/services/item1.jpg" alt="">
-                        <h2>Отели</h2>
-                    </div>
-                    <div class="services__bottom">
-                        <span>Перейти к выбору</span>
-                        <div class="services__icon">
-                            <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_336_1113)">
-                                    <path d="M36 18L27 33.5885L9 33.5885L-7.86805e-07 18L9 2.41154L27 2.41154L36 18Z" fill="#254D57"/>
-                                    <path d="M11 18L25 18M25 18L19.75 23M25 18L19.75 13" stroke="#F6F6F6" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/>
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_336_1113">
-                                        <rect width="36" height="36" fill="white"/>
-                                    </clipPath>
-                                </defs>
-                            </svg>
+        <section class="specials">
+            <div class="container">
+                <div class="specials__list">
+                    <a href="/hadj/" class="specials__item">
+                        <img src="assets/images/specials/item1.jpg" alt="">
+                        <div class="specials__text">
+                            <h2>Хадж</h2>
+                            <span class="specials__subtitle">2024</span>
+                            <span>Специальное предложение</span>
                         </div>
-                    </div>
-                </a>
-                <a href="" class="services__item">
-                    <div class="services__img">
-                        <img src="assets/images/services/item2.jpg" alt="">
-                        <h2>оформление визы</h2>
-                    </div>
-                    <div class="services__bottom">
-                        <span>Ознакомиться со списком</span>
-                        <div class="services__icon">
-                            <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_336_1113)">
-                                    <path d="M36 18L27 33.5885L9 33.5885L-7.86805e-07 18L9 2.41154L27 2.41154L36 18Z" fill="#254D57"/>
-                                    <path d="M11 18L25 18M25 18L19.75 23M25 18L19.75 13" stroke="#F6F6F6" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/>
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_336_1113">
-                                        <rect width="36" height="36" fill="white"/>
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                        </div>
-                    </div>
-                </a>
-                <a href="/documents/" class="services__item">
-                    <div class="services__img">
-                        <img src="assets/images/services/item3.jpg" alt="">
-                        <h2>необходимые документы</h2>
-                    </div>
-                    <div class="services__bottom">
-                        <span>Ознакомиться со списком</span>
-                        <div class="services__icon">
-                            <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_336_1113)">
-                                    <path d="M36 18L27 33.5885L9 33.5885L-7.86805e-07 18L9 2.41154L27 2.41154L36 18Z" fill="#254D57"/>
-                                    <path d="M11 18L25 18M25 18L19.75 23M25 18L19.75 13" stroke="#F6F6F6" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/>
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_336_1113">
-                                        <rect width="36" height="36" fill="white"/>
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-</main>
-
-
-<footer class="footer">
-    <div class="container">
-        <div class="footer-top">
-            <div class="footer-top__col">
-                <ul class="footer__contacts">
-                    <li>
-                        <span>Контактный центр</span>
-                        <a href="">+7(495)120-44-78</a>
-                    </li>
-                    <li>
-                        <span>Адрес электронной почты</span>
-                        <p>info@maravia.ru</p>
-                    </li>
-                    <li>
-                        <span>Реквизиты</span>
-                        <p>ИНН 0278201768</p>
-                    </li>
-                    <li>
-                        <span>Адрес</span>
-                        <p>Москва, Каширское шоссе 3, корпус 2, строение 9.</p>
-                    </li>
-                </ul>
-                <div class="footer-bot footer-bot__mobile">
-                    <div class="footer-bot__desc">
-                        <span> © 2024  «Maravia»</span>
-                    </div>
-                    <a href="#" class="politic">
-                        Политика конфиденциальности
                     </a>
-                    <div class="footer-bot__direkt">
-                        Сделано в <a href="https://direkt.ink/">Direkt.ink</a>
-                    </div>
+                    <a href="/hadj/" class="specials__item">
+                        <img src="assets/images/specials/item2.jpg" alt="">
+                        <div class="specials__text">
+                            <h2>Умра</h2>
+                            <span class="specials__subtitle">2024</span>
+                            <span>Специальное предложение</span>
+                        </div>
+                    </a>
                 </div>
             </div>
-            <div class="footer-top__col">
+        </section>
+        <section class="banner">
+            <div class="banner__bg">
+                <img src="assets/images/banner.jpg" alt="">
+            </div>
+            <div class="banner__content">
+                <div class="banner__tag">
+                    Специальное предложение
+                </div>
                 <span>
-                    Мы в социальных сетях
+                    Ближайшие даты тура
                 </span>
-                <ul class="footer-socials">
-                    <li>
-                        <a href="">
-                            <img src="/assets/images/telegram.svg" alt="">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="/assets/images/vk.svg" alt="">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="/assets/images/instagram.svg" alt="">
-                        </a>
-                    </li>
-                </ul>
-                <div class="footer__logo">
-                    <img src="/assets/images/footer-logo.svg" alt="">
+                <h2>
+                    2 —16 июня
+                </h2>
+                <button class="btn btn-prime">
+                    Найти билеты
+                </button>
+            </div>
+        </section>
+        <section class="services">
+            <div class="container">
+                <div class="services__list">
+                    <a href="" class="services__item">
+                        <div class="services__img">
+                            <img src="assets/images/services/item1.jpg" alt="">
+                            <h2>Отели</h2>
+                        </div>
+                        <div class="services__bottom">
+                            <span>Перейти к выбору</span>
+                            <div class="services__icon">
+                                <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_336_1113)">
+                                        <path
+                                            d="M36 18L27 33.5885L9 33.5885L-7.86805e-07 18L9 2.41154L27 2.41154L36 18Z"
+                                            fill="#254D57" />
+                                        <path d="M11 18L25 18M25 18L19.75 23M25 18L19.75 13" stroke="#F6F6F6"
+                                            stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_336_1113">
+                                            <rect width="36" height="36" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="services__item">
+                        <div class="services__img">
+                            <img src="assets/images/services/item2.jpg" alt="">
+                            <h2>оформление визы</h2>
+                        </div>
+                        <div class="services__bottom">
+                            <span>Ознакомиться со списком</span>
+                            <div class="services__icon">
+                                <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_336_1113)">
+                                        <path
+                                            d="M36 18L27 33.5885L9 33.5885L-7.86805e-07 18L9 2.41154L27 2.41154L36 18Z"
+                                            fill="#254D57" />
+                                        <path d="M11 18L25 18M25 18L19.75 23M25 18L19.75 13" stroke="#F6F6F6"
+                                            stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_336_1113">
+                                            <rect width="36" height="36" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/documents/" class="services__item">
+                        <div class="services__img">
+                            <img src="assets/images/services/item3.jpg" alt="">
+                            <h2>необходимые документы</h2>
+                        </div>
+                        <div class="services__bottom">
+                            <span>Ознакомиться со списком</span>
+                            <div class="services__icon">
+                                <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_336_1113)">
+                                        <path
+                                            d="M36 18L27 33.5885L9 33.5885L-7.86805e-07 18L9 2.41154L27 2.41154L36 18Z"
+                                            fill="#254D57" />
+                                        <path d="M11 18L25 18M25 18L19.75 23M25 18L19.75 13" stroke="#F6F6F6"
+                                            stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_336_1113">
+                                            <rect width="36" height="36" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
-            <div class="footer-top__col">
-                <div class="footer-top__links">
-                    <a href="/reviews/">Отзывы</a>
-                    <a href="/media_center/">Медиа-центр</a>
-                </div>
+        </section>
+    </main>
 
-                <div class="footer-bot footer-bot__desktop">
-                    <div class="footer-bot__desc">
-                        <span> © 2024  «Maravia»</span>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-top__col">
+                    <ul class="footer__contacts">
+                        <li>
+                            <span>Контактный центр</span>
+                            <a href="">+7(495)120-44-78</a>
+                        </li>
+                        <li>
+                            <span>Адрес электронной почты</span>
+                            <p>info@maravia.ru</p>
+                        </li>
+                        <li>
+                            <span>Реквизиты</span>
+                            <p>ИНН 0278201768</p>
+                        </li>
+                        <li>
+                            <span>Адрес</span>
+                            <p>Москва, Каширское шоссе 3, корпус 2, строение 9.</p>
+                        </li>
+                    </ul>
+                    <div class="footer-bot footer-bot__mobile">
+                        <div class="footer-bot__desc">
+                            <span> © 2024 «Maravia»</span>
+                        </div>
+                        <a href="#" class="politic">
+                            Политика конфиденциальности
+                        </a>
+                        <div class="footer-bot__direkt">
+                            Сделано в <a href="https://direkt.ink/">Direkt.ink</a>
+                        </div>
                     </div>
-                    <a href="./politics" class="politic">
-                        Политика конфиденциальности
-                    </a>
-                    <div class="footer-bot__direkt">
-                        Сделано в <a href="https://direkt.ink/">Direkt.ink</a>
+                </div>
+                <div class="footer-top__col">
+                    <span>
+                        Мы в социальных сетях
+                    </span>
+                    <ul class="footer-socials">
+                        <li>
+                            <a href="">
+                                <img src="/assets/images/telegram.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="/assets/images/vk.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="/assets/images/instagram.svg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="footer__logo">
+                        <img src="/assets/images/footer-logo.svg" alt="">
+                    </div>
+                </div>
+                <div class="footer-top__col">
+                    <div class="footer-top__links">
+                        <a href="/reviews/">Отзывы</a>
+                        <a href="/media_center/">Медиа-центр</a>
+                    </div>
+
+                    <div class="footer-bot footer-bot__desktop">
+                        <div class="footer-bot__desc">
+                            <span> © 2024 «Maravia»</span>
+                        </div>
+                        <a href="./politics" class="politic">
+                            Политика конфиденциальности
+                        </a>
+                        <div class="footer-bot__direkt">
+                            Сделано в <a href="https://direkt.ink/">Direkt.ink</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
-<script
-        src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-        crossorigin="anonymous"></script>
-<script
-  src="https://code.jquery.com/ui/1.13.3/jquery-ui.min.js"
-  integrity="sha256-sw0iNNXmOJbQhYFuC9OF2kOlD5KQKe1y5lfBn4C9Sjg="
-  crossorigin="anonymous"></script>
-<script src="js/styler/jquery.formstyler.js"></script>
-<script src="assets/index.js?v=4"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.min.js"
+        integrity="sha256-sw0iNNXmOJbQhYFuC9OF2kOlD5KQKe1y5lfBn4C9Sjg=" crossorigin="anonymous"></script>
+    <script src="js/styler/jquery.formstyler.js"></script>
+    <script src="assets/index.js?v=4"></script>
 </body>
+
 </html>
