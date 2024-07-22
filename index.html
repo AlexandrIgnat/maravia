@@ -76,7 +76,7 @@
                                 <a href="" class="header-navigation__link">Информация</a>
                                 <div class="header-navigation__list">
                                     <a href="/faq/">Вопросы и ответы</a>
-                                    <a href="">Фотогалерея</a>
+                                    <a href="/gallery/">Фотогалерея</a>
                                     <a href="">Оставить отзыв</a>
                                 </div>
                             </li>
@@ -191,19 +191,17 @@
         <div class="container">
             <div id="root"></div>
         </div>
-        
-
-<link rel="stylesheet" href="https://cdn.nemo.travel/search-form/v2.5.22/flights.search.widget.min.css">
-<script src="https://cdn.nemo.travel/search-form/v2.5.22/flights.search.widget.min.js"></script>
-<script>
-    // Полный список параметров перечислен в разделе "Конфигурация".
-    FlightsSearchWidget.init({
-        webskyURL: 'http://demo.websky.aero/gru',
-        nemoURL: 'https://booking.maravia.ru',
-        rootElement: document.getElementById('root'),
-        locale: 'ru'
-    });
-</script>
+        <link rel="stylesheet" href="https://cdn.nemo.travel/search-form/v2.5.22/flights.search.widget.min.css">
+        <script src="https://cdn.nemo.travel/search-form/v2.5.22/flights.search.widget.min.js"></script>
+        <script>
+            // Полный список параметров перечислен в разделе "Конфигурация".
+            FlightsSearchWidget.init({
+                webskyURL: 'http://demo.websky.aero/gru',
+                nemoURL: 'https://booking.maravia.ru',
+                rootElement: document.getElementById('root'),
+                locale: 'ru'
+            });
+        </script>
         <section class="specials">
             <div class="container">
                 <div class="specials__list">
@@ -391,7 +389,7 @@
                 <div class="footer-top__col">
                     <div class="footer-top__links">
                         <a href="/reviews/">Отзывы</a>
-                        <a href="/media_center/">Медиа-центр</a>
+                        <a href="/gallery/">Медиа-центр</a>
                     </div>
 
                     <div class="footer-bot footer-bot__desktop">
