@@ -408,43 +408,61 @@
         </div>
     </footer>
 
-    <dialog class="modal-form" id="modal">
+    <dialog class="modal-visa" id="modal">
         <div class="modal-form__wrapper">
-            <form action="">
+            <div>
+                <h2 class="modal-form__heading">Оформить визу</h2>
+            </div>
+            <form action="" class="modal-visa__form">
                 <div>
-                    <span class="modal-form__heading">Оформить визу</span>
-                    <span class="modal-form__id"></span>
+                    <div class="modal-visa__form-field">
+                        <label class="modal-form__label" for="surname">
+                            *<span>ФИО</span>
+                        </label>
+                        <input class="modal-form__input" id="surname" type="text">
+                    </div>
+                    <div class="modal-visa__form-field">
+                        <label class="modal-form__label" for="name">
+                            *<span>Телефон</span>
+                        </label>
+                        <input class="modal-form__input" id="name" type="number">
+                    </div>
+                    <div class="modal-visa__form-field">
+                        <label class="modal-form__label" for="last-name">
+                            *<span>E-mail</span>
+                        </label>
+                        <input class="modal-form__input" id="last-name" type="email">
+                    </div>
+                    <div class="modal-visa__form-field">
+                        <label class="modal-form__label" for="visa-type">
+                            <span>Тип визы:</span>
+                        </label>
+                        <div id="visa-type" class="main-filter__select main-filter__bot--item">
+                            <select name="" id="" class="">
+                                <option value="">Стандарт</option>
+                                <option value="">Комфорт</option>
+                                <option value="" selected>Премиум</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
-                <label for="surname">
-                    *<span class="modal-form__label">ФИО</span>
-                </label>
-                <input class="modal-form__input" id="surname" type="text">
-                <label for="name">
-                    *<span class="modal-form__label">Телефон</span>
-                </label>
-                <input class="modal-form__input" id="name" type="number">
-                <label for="last-name">
-                    *<span class="modal-form__label">E-mail</span>
-                </label>
-                <input class="modal-form__input" id="last-name" type="email">
-                <label for="visa-type">
-                    *<span class="modal-form__label">E-mail</span>
-                </label>
-                <div id="visa-type" class="main-filter__select main-filter__bot--item">
-                    <span>Тип визы:</span>
-                    <select name="" id="">
-                        <option value="">Стандарт</option>
-                        <option value="">Комфорт</option>
-                        <option value="" selected>Премиум</option>
-                    </select>
-                </div>
-                <button type="submit">Отправить заявку</button>    
+                <span class="modal-visa__reuired">* Обязательные поля для заполнения</span>
+                <p class="modal-visa__info">Нажимая кнопку «Отправить заявку» вы соглашаетесь с политикой обработки персональных данных.</p>
+                <button type="submit" class="btn btn-prime btn-modal-visa">Отправить заявку</button>
             </form>
         </div>
-        <button id="modal-form__close" class="modal-form__close btn-reset" onclick="modal.close()"><svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M22.2333 7.73333L21.2666 6.76666L14.4999 13.5334L7.73324 6.7667L6.76658 7.73336L13.5332 14.5L6.7666 21.2667L7.73327 22.2333L14.4999 15.4667L21.2666 22.2334L22.2332 21.2667L15.4666 14.5L22.2333 7.73333Z" fill="#B0B0B0"/>
+        <button id="modal-form__close" class="modal-form__close btn-reset" onclick="modal.close()">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_5017_732)">
+            <path d="M-8.3999 -7.7002L36.4001 31.3598V35.6998L-8.3999 -3.3602V-7.7002ZM-8.3999 31.3598L36.4001 -7.7002V-3.3602L-8.3999 35.6998V31.3598Z" fill="#254D57"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_5017_732">
+            <rect width="28" height="28" fill="white"/>
+            </clipPath>
+            </defs>
             </svg>
-            </button>
+        </button>
     </dialog>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"

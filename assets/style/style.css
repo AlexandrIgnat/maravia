@@ -2258,3 +2258,77 @@ section {
   flex: 0 0 36px;
   height: 36px;
 }
+
+/* DIALOG */
+
+.modal-visa {
+  margin: auto;
+  padding: 40px;
+  background-color: var(--main-blue);
+  width: 100%;
+  max-width: 530px;
+  overflow: visible;
+}
+.modal-visa::backdrop {
+  opacity: 1;
+  background-color: rgba(17, 34, 39, 0.800);
+}
+.modal-visa__form {
+  display: flex;
+  flex-direction: column;
+}
+.modal-form__heading {
+  font-size: 40px;
+  line-height: 1.2;
+  color: #254D57;
+  margin-bottom: 40px;
+}
+.modal-form__label {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+.modal-visa__form-field {
+  display: flex;
+  flex-direction: column;
+}
+.modal-form__input {
+  background-color: white;
+  padding: 17.5px 32px;
+}
+.modal-visa__form-field:not(:last-child) {
+  margin-bottom: 20px;
+}
+.modal-visa__form-field:last-child {
+  margin-bottom: 8px;
+}
+#visa-type {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+#visa-type .jq-selectbox__select {
+  padding: 17px 32px;
+}
+#visa-type .dropdown.opened .jq-selectbox__dropdown {
+  left: initial;
+  top: initial !important;
+}
+#visa-type .jq-selectbox__dropdown li{
+  padding: 16px 32px;
+}
+.btn-modal-visa {
+  max-width: 100%;
+}
+.modal-visa__reuired {
+  margin-bottom: 20px;
+}
+.modal-visa__info {
+  margin-bottom: 40px;
+}
+.modal-form__close {
+  position: absolute;
+  top: 50px;
+  right: 40px;
+}
