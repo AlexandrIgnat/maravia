@@ -195,3 +195,12 @@ const allSliders = document.querySelectorAll('.swiper');
 
 // Loop over all of the fetched sliders and apply Swiper on each one.
 allSliders.forEach(slider => buildSwiperSlider(slider));
+
+// const button = document.querySelector(".widget-form-search__startButton");
+
+// // Создаем копию кнопки:
+// const newButton = button.cloneNode(true);
+
+// const wrapWidget = document.querySelector('.widget-form-search__wrapper');
+// wrapWidget.appendChild(newButton);
+// button.remove(); 

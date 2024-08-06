@@ -2332,3 +2332,27 @@ section {
   top: 50px;
   right: 40px;
 }
+.widget {
+  background-color: var(--main-blue);
+}
+.widget-form-search__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.widget-form-airports {
+  flex: 0 0 40%;
+  display: flex;
+  gap: 40px;
+}
+.widget-form-airports__swap {
+  left: -40px;
+  height: 38px;
+  border-radius: 0;
+  border-width: 0;
+  background-color: #e6e3e3;
+}
+
+.widget-form-airports__swap::after {
+  color: #000;
+}
