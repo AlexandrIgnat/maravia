@@ -684,7 +684,7 @@ h1 {
   align-items: center;
   gap: 20px;
   background-color: #C3DEE5;
-  padding: 30px;
+  padding: 10px;
   margin-top: -100px;
 }
 
@@ -2361,7 +2361,24 @@ section {
   border-width: 0;
   background-color: #e6e3e3;
 }
-
 .widget-form-airports__swap::after {
   color: #000;
+}
+.widget-form-search__footer .col:last-of-type {
+  display: flex;
+  justify-content: space-between;
+}
+.btn.btn-primary.widget-form-search__startButton {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 20px;
+  height: fit-content;
+  padding: 17px 30px;
+  text-align: center;
+  max-width: 260px;
+  background-color: #112227;
+  color: white;
+}
+#root section {
+  margin: 0;
 }
