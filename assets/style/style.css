@@ -190,6 +190,7 @@ body {
 }
 
 .header-navigation ul {
+  font-size: 22px;
   display: flex;
   align-items: center;
 }
@@ -1319,8 +1320,9 @@ section {
 
 .services__bottom {
   padding: 25px 40px;
+  color: #112227;
   background-color: #C3DEE5;
-  border-top: 20px solid rgb(37, 77, 87);
+  /* border-top: 20px solid rgb(37, 77, 87); */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -2232,6 +2234,7 @@ section {
 .questions-container .questions__content {
   padding: 0 0 20px;
   background-color: transparent;
+  border: 0;
 }
 .list-disc {
   list-style: disc inside;
@@ -2267,7 +2270,7 @@ section {
   background-color: var(--main-blue);
   width: 100%;
   max-width: 530px;
-  overflow: visible;
+  overflow: scroll;
 }
 .modal-visa::backdrop {
   opacity: 1;
@@ -2340,10 +2343,16 @@ section {
   flex-wrap: wrap;
   gap: 20px;
 }
+.widget-form-airports,
+.widget-form-dates {
+  flex: 0 0 50%;
+}
 .widget-form-airports {
-  flex: 0 0 40%;
   display: flex;
   gap: 40px;
+}
+.widget-form-search__footer {
+  flex: 0 0 100%;
 }
 .widget-form-airports__swap {
   left: -40px;

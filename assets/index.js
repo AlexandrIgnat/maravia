@@ -39,7 +39,7 @@ $( document ).ready(function() {
             for(let i = 0; i<le; i++){
                 if(conts[i].nodeType == 8) ifr = conts[i].textContent;
             }
-
+            console.log(ifr);
             elm.addClass("player").html(ifr);
             elm.off("click");
         });
