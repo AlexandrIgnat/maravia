@@ -158,8 +158,44 @@ const openPopup =   document.querySelectorAll('.popup__open');
             })
         })
     }
+
+    if (document.querySelectorAll('.btn-prime-request')) {
+        const requestTour = document.querySelectorAll('.btn-prime-request');
+
+        Array.from(requestTour).forEach(function(el) {
+            el.addEventListener('click', function(e) {
+                e.preventDefault();
+            })
+        })
+
+        Array.from(requestTour).forEach(function(link) {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                Array.from($('#tour')).forEach((option ) => {
+                    Array.from(option).forEach((el, index) => {
+                        if(el.value === link.dataset.role) {
+                            option[index].selected = true;
+                        }
+                    })
+                })
+
+                Array.from($('.jq-selectbox__dropdown li')).forEach((item) => {
+                    if(item.innerHTML === link.dataset.role) {
+                        $('.jq-selectbox__select-text')[0].innerHTML = item.innerHTML;
+                        item.classList.add('sel')
+                    } else {
+                        item.classList.remove('sel')
+                    }
+
+                })
+            })
+        })
+    }
     
 });
+
+
 
 function blockScroll() {
     document.documentElement.classList.toggle('no-scroll');
@@ -204,3 +240,14 @@ allSliders.forEach(slider => buildSwiperSlider(slider));
 // const wrapWidget = document.querySelector('.widget-form-search__wrapper');
 // wrapWidget.appendChild(newButton);
 // button.remove(); 
+
+let footerBlock = $('.widget-form-search__footer').detach();
+
+let newWidgetForm = $('<div class="widget-form-search"><div class="widget-form-search__wrapper"></div></div>');
+newWidgetForm.find('.widget-form-search__wrapper').append(footerBlock);
+
+let newSection = $('<section class="widget-form widget-form__bottom"></section>');
+newSection.append(newWidgetForm);
+
+$('.widget-form').addClass('widget-form__top')
+$('.widget-form').after(newSection);
