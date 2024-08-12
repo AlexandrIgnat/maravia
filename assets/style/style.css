@@ -1575,6 +1575,10 @@ section {
   max-width: 759px;
 }
 
+.video__title.medina {
+  color: #112227;
+}
+
 .video__title--mobile {
   display: none;
 }
@@ -2351,7 +2355,7 @@ section {
   background-color: var(--main-blue);
 }
 .widget-form-search {
-  padding: 15px 15px 12px 15px;
+  padding: 15px 15px 12.3px 15px;
 }
 .widget-form-search__wrapper {
   display: flex;
@@ -2381,19 +2385,21 @@ section {
 .widget .widget-form-passengers__trigger__title {
   height: 45px;
   padding-top: 2px;
+  background-color: #fff;
 }
 .widget .widget-form-dates .widget-ui-tooltip {
-  height: 45px;
+  height: 47px;
 }
 .widget .widget-form-dates .form-control {
-  height: 45px;
+  height: 47px;
 }
 .widget-form-search__footer {
   flex: 0 0 100%;
 }
 .widget-form-airports__swap {
-  left: -40px;
-  height: 45px;
+  left: -41px;
+  width: 41px;
+  height: 46.8px;
   border-radius: 0;
   border-width: 0;
   background-color: #e6e3e3;
@@ -2404,6 +2410,10 @@ section {
 .widget-form-search__footer .col:last-of-type {
   display: flex;
   justify-content: space-between;
+  padding-right: 24px;
+}
+.widget-form-search__footer .col:nth-of-type(odd) {
+  padding-right: 15px;
 }
 .btn.btn-primary.widget-form-search__startButton {
   display: inline-block;
