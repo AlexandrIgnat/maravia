@@ -15,7 +15,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="js/styler/jquery.formstyler.css">
-    <link rel="stylesheet" href="assets/widget/flights.search.widget.min.css">
+    <link rel="stylesheet" href="https://cdn.nemo.travel/search-form/v2.5.22/flights.search.widget.min.css">
+    <!-- <link rel="stylesheet" href="assets/widget/flights.search.widget.min.css"> -->
     <link rel="stylesheet" href="assets/style/style.css?v=20">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,600,700&subset=cyrillic">
 
@@ -193,18 +194,18 @@
         <!-- <div class="container">
             <div id="root"></div>
         </div> -->
-        <script src="assets/widget/flights.search.widget.min.js"></script>
-        <script>
-            // Полный список параметров перечислен в разделе "Конфигурация".
-            FlightsSearchWidget.init({
-                webskyURL: 'http://demo.websky.aero/gru',
-                nemoURL: 'https://booking.maravia.ru',
-                rootElement: document.getElementById('root'),
-                locale: 'ru',
-                directOnly: true,
-                defaultServiceClass: "Economy"
-            });
-        </script>
+       <div id="root"></div>
+
+<script src="https://cdn.nemo.travel/search-form/v2.5.22/flights.search.widget.min.js"></script>
+<script>
+    // Полный список параметров перечислен в разделе "Конфигурация".
+    FlightsSearchWidget.init({
+        webskyURL: 'http://demo.websky.aero/gru',
+        nemoURL: 'https://booking.maravia.ru',
+        rootElement: document.getElementById('root'),
+        locale: 'ru'
+    });
+</script>
         <section class="specials">
             <div class="container">
                 <div class="specials__list">
