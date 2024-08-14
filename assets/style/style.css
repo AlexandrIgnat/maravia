@@ -1103,7 +1103,7 @@ section {
 .specials__text {
   display: flex;
   flex-direction: column;
-  z-index: 1;
+  z-index: 0;
 }
 
 @media (max-width: 1440px) {
@@ -2345,13 +2345,16 @@ section {
   top: 50px;
   right: 40px;
 }
+.widget {
+  padding: 0;
+}
 .widget-segments {
-  padding: 10px 10px 0px 10px;
+  padding: 26.5px;
   margin: 0;
   background-color: #99afb5;
 }
-.widget-footer {
-  padding: 0 10px 10px 10px;
+.widget-footer{
+  padding: 15px;
   background-color: var(--main-blue);
 }
 .widget-form-search {
@@ -2370,19 +2373,20 @@ section {
   display: flex;
   gap: 40px;
 }
-.widget-form-airports .widget-form-airports__select__value__placeholder {
+.Select-placeholder {
   padding-top: 4px;
 }
-.widget-form-airports__select .Select-control {
+.widget-airports__select .Select-control {
   height: 45px;
 }
-.widget-form-airports__select .Select-input {
+.widget-airports__select .Select-input {
   height: 45px;
 }
-.widget-form-airports__select .Select-placeholder {
+.widget-airports__select .Select-placeholder {
   padding-top: 2px;
 }
-.widget .widget-form-passengers__trigger__title {
+.widget .widget-passengers__trigger__title {
+  display: block;
   height: 45px;
   padding-top: 2px;
   background-color: #fff;
@@ -2393,7 +2397,10 @@ section {
 .widget .widget-form-dates .form-control {
   height: 47px;
 }
-.widget-form-search__footer {
+.widget .form-control.widget-ui-input {
+  height: 47px;
+}
+.widget-footer {
   flex: 0 0 100%;
 }
 .widget-airports__swap {
@@ -2407,15 +2414,18 @@ section {
 .widget-airports__swap::after {
   color: #000;
 }
-.widget-form-search__footer .col:last-of-type {
+.widget-footer .widget-footer__col:last-of-type {
   display: flex;
   justify-content: space-between;
   padding-right: 24px;
 }
-.widget-form-search__footer .col:nth-of-type(odd) {
+.widget-footer .col:nth-of-type(odd) {
   padding-right: 15px;
 }
-.btn.btn-primary.widget-form-search__startButton {
+.widget-dates__caption {
+  padding-top: 4px;
+}
+.btn.btn-primary.widget__startButton {
   display: inline-block;
   font-weight: 500;
   font-size: 20px;
@@ -2425,6 +2435,24 @@ section {
   max-width: 260px;
   background-color: #112227;
   color: white;
+}
+.widget-segments__segment * {
+  margin: 0;
+}
+.widget-footer__col * {
+  margin: 0;
+}
+.widget__routeTypeSwitch_toCR {
+  position: relative;
+}
+.widget-additionalOptions {
+  flex-wrap: wrap;
+  height: initial;
+}
+.widget-additionalOptions__checkboxes:first-child {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 #root section {
   margin: 0;
