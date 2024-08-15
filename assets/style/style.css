@@ -2354,7 +2354,7 @@ section {
   background-color: #99afb5;
 }
 .widget-footer{
-  padding: 15px;
+  padding: 26.5px;
   background-color: var(--main-blue);
 }
 .widget-form-search {
@@ -2417,7 +2417,7 @@ section {
 .widget-footer .widget-footer__col:last-of-type {
   display: flex;
   justify-content: space-between;
-  padding-right: 24px;
+  /* padding-right: 24px; */
 }
 .widget-footer .col:nth-of-type(odd) {
   padding-right: 15px;
@@ -2427,20 +2427,38 @@ section {
 }
 .btn.btn-primary.widget__startButton {
   display: inline-block;
+  flex: 0 0 32%;
   font-weight: 500;
   font-size: 20px;
   height: fit-content;
   padding: 3px 30px;
   text-align: center;
-  max-width: 260px;
+  max-width: 100%;
+  /* max-width: 260px; */
   background-color: #112227;
   color: white;
+}
+@media (max-width: 1200px) {
+  .btn.btn-primary.widget__startButton {
+    flex: 0 0 50%;
+  }
+}
+@media only screen and (max-width: 650px) {
+   .widget-airports {
+    flex-direction: column;
+   }
+   .widget-airports__swap {
+    transform: translate(44px, -32px) rotate(90deg);
+   }
 }
 .widget-segments__segment * {
   margin: 0;
 }
 .widget-footer__col * {
   margin: 0;
+}
+.widget .widget-ui-checkbox__caption {
+  font-size: 18px;
 }
 .widget__routeTypeSwitch_toCR {
   position: relative;
@@ -2456,6 +2474,15 @@ section {
 }
 #root section {
   margin: 0;
+}
+.widget-footer .widget-footer__col {
+  padding: 0;
+}
+.widget-footer {
+  gap: 20px;
+}
+.widget-footer__col:first-child {
+  flex: 0 0 23.4%;
 }
 
 @media (max-height: 900px) {
@@ -2489,4 +2516,34 @@ section {
   .popup__wrapper form input {
     padding: 10px 32px;
   }
+}
+
+/* Сложный маршрут widget_CR */
+/* .widget_CR {
+
+}
+.widget-segments_CR widget-segments__segment {
+  flex-wrap: nowrap;
+}
+.widget-segments_CR .widget-airports {
+  flex: 0 0 70%;
+}
+.widget-segments_CR .widget-dates {
+  flex: 0 0 30%;
+} */
+.widget-segments_CR {
+  gap: 20px;
+}
+.widget-segments_CR .widget-airports {
+  gap: 18px;
+}
+.widget-segments_CR .widget-segments__segment {
+  flex-wrap: nowrap;
+}
+.widget-segments_CR  .widget-dates {
+  flex: initial;
+}
+
+.widget_CR .widget__routeTypeSwitch {
+  position: relative;
 }
